@@ -1,0 +1,20 @@
+{
+  "name": "injection-labels-server",
+  "version": "1.0.0",
+  "description": "server for injection labels app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fizirvin/injection-labels-server.git"
+  },
+  "keywords": [],
+  "author": "Irvin Fiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fizirvin/injection-labels-server/issues"
+  },
+  "homepage": "https://github.com/fizirvin/injection-labels-server#readme"
+}
