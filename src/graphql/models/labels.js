@@ -9,7 +9,7 @@ const labelSchema = new Schema({
     type: String,
     required: true
   },
-  clienRef:{
+  clientRef:{
     type: String,
     required: true
   },
