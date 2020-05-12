@@ -1,19 +1,31 @@
 import {Schema, model } from 'mongoose';
 
 const labelSchema = new Schema({
-  model:{
+  header:{
     type: String,
     required: true
   },
-  serial:{
+  intRef:{
     type: String,
     required: true
   },
-  partNumber:{
+  clienRef:{
     type: String,
     required: true
   },
-  type:{
+  certification:{
+    type: String,
+    required: true
+  },
+  pieces:{
+    type: String,
+    required: true
+  },
+  color:{
+    type: String,
+    required: true
+  },
+  text:{
     type: String,
     required: true
   }

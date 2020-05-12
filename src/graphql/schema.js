@@ -9,15 +9,22 @@ const typeDefs = `
 
     type Label {
         _id: ID!
-        model: String!
-        serial: String!
-        partNumber: String!
-        type: String!
+        header: String!
+        intRef: String!
+        clientRef: String!
+        certification: String!
+        pieces: String!
+        color: String!
+        text: String!
     }
 
     type Plastic {
         _id: ID!
-        model: String! 
+        header: String!
+        color: String!
+        text: String!
+        intRef: String!
+        pieces: String!
     }
 
     type Mutation { 
@@ -29,14 +36,21 @@ const typeDefs = `
     }
 
     input NewLabel {
-        model: String!
-        serial: String!
-        partNumber: String!
-        type: String!
+        header: String!
+        intRef: String!
+        clientRef: String!
+        certification: String!
+        pieces: String!
+        color: String!
+        text: String!
     }
 
     input NewPlastic {
-        model: String!
+        header: String!
+        color: String!
+        text: String!
+        intRef: String!
+        pieces: String!
     }
 
 `;
