@@ -28,6 +28,10 @@ const labelSchema = new Schema({
   text:{
     type: String,
     required: true
+  },
+  machine:{
+    type: String,
+    required: true
   }
 });
 

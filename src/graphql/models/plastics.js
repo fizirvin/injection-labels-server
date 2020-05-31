@@ -20,6 +20,10 @@ const plasticSchema = new Schema({
   pieces:{
     type: String,
     required: true
+  },
+  machine:{
+    type: String,
+    required: true
   }
 });
 

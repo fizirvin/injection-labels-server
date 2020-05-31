@@ -16,6 +16,7 @@ const typeDefs = `
         pieces: String!
         color: String!
         text: String!
+        machine: String!
     }
 
     type Plastic {
@@ -25,6 +26,7 @@ const typeDefs = `
         text: String!
         intRef: String!
         pieces: String!
+        machine: String!
     }
 
     type Mutation { 
@@ -43,6 +45,7 @@ const typeDefs = `
         pieces: String!
         color: String!
         text: String!
+        machine: String!
     }
 
     input NewPlastic {
@@ -51,6 +54,7 @@ const typeDefs = `
         text: String!
         intRef: String!
         pieces: String!
+        machine: String!
     }
 
 `;
