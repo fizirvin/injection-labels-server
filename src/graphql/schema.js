@@ -5,6 +5,7 @@ const typeDefs = `
     type Query {
         labels: [Label]
         plastics: [Plastic]
+        configs( team: String ): TeamConfig
     }
 
     type Label {
@@ -17,6 +18,23 @@ const typeDefs = `
         color: String!
         text: String!
         machine: String!
+    }
+
+    type TeamConfig {
+        _id: ID!
+        team: String!
+        inspectors: [Inspector]
+        operators: [Operator]
+    }
+
+    type Inspector {
+        _id: ID!
+        inspector: String!
+    }
+
+    type Operator {
+        _id: ID!
+        operator: String!
     }
 
     type Plastic {
@@ -35,6 +53,23 @@ const typeDefs = `
 
         newPlastic(_id: ID, input: NewPlastic): Plastic
         updatePlastic(_id: ID, input: NewPlastic): Plastic
+
+        updateConfig(_id: ID, input: ConfigInput): TeamConfig
+    }
+
+    input ConfigInput{
+        inspectors: [InspectorInput]
+        operators: [OperatorInput]
+    }
+
+    input InspectorInput {
+        _id: ID
+        inspector: String
+    }
+
+    input OperatorInput {
+        _id: ID
+        operator: String
     }
 
     input NewLabel {

@@ -1,5 +1,6 @@
 import labels from './models/labels.js';
 import plastics from './models/plastics.js';
+import configs from './models/configs.js';
 
 export const resolvers = {
   Query: {
@@ -8,6 +9,10 @@ export const resolvers = {
     },
     async plastics(){
       return await plastics.find();
+    },
+    async configs(_,{ team }){
+      
+      return await configs.findOne({ team });
     }
   },
   Mutation: {
@@ -18,6 +23,9 @@ export const resolvers = {
     },
     async updateLabel(_,{ _id, input }){
       return await labels.findByIdAndUpdate(_id,input, {new: true });
+    },
+    async updateConfig(_,{ _id, input }){
+      return await configs.findByIdAndUpdate(_id,input, {new: true });
     },
     async newPlastic(_, { input }){
       const item = new plastics(input);
