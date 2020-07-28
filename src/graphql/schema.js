@@ -25,6 +25,7 @@ const typeDefs = `
         team: String!
         inspectors: [Inspector]
         operators: [Operator]
+        quantity: [Quantity]
     }
 
     type Inspector {
@@ -35,6 +36,11 @@ const typeDefs = `
     type Operator {
         _id: ID!
         operator: String!
+    }
+
+    type Quantity {
+        _id: ID!
+        quantity: String!
     }
 
     type Plastic {
@@ -60,6 +66,7 @@ const typeDefs = `
     input ConfigInput{
         inspectors: [InspectorInput]
         operators: [OperatorInput]
+        quantity: [QuantityInput]
     }
 
     input InspectorInput {
@@ -70,6 +77,11 @@ const typeDefs = `
     input OperatorInput {
         _id: ID
         operator: String
+    }
+
+    input QuantityInput {
+        _id: ID
+        quantity: String
     }
 
     input NewLabel {

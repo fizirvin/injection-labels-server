@@ -12,6 +12,10 @@ const ConfigSchema = new Schema({
   operators:[{
     _id: { type: String, required: false },
     operator: { type: String, required: false }
+  }],
+  quantity:[{
+    _id: { type: String, required: false },
+    quantity: { type: String, required: false }
   }]
 });
 
